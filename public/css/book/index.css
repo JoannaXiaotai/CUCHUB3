@@ -1,0 +1,43 @@
+.py-4{
+    padding-top:0 !important;
+}
+.my-jumbotron{
+    width:60%;
+    margin-top:5%;
+    margin-bottom:5%;
+    margin-left:3%;
+    padding:0.8rem 0.5rem;
+    color:white;
+    background-color:black;
+    opacity: 0.5;
+    font-size:0.2rem;
+}
+.my-jumbotron > .row > .col-md-8 > h5{
+     font-size:1rem;
+ }
+.btn-group > a > div{
+    font-size:10px;
+}
+.my-jumbotron:hover {
+    opacity: 0.9;
+}
+.my-carousel{
+    background-image: url(http://localhost:82/img/book/book_index_star.png);
+}
+.my-card{
+    margin:0 0.1rem 0 0.1rem;
+    font-size:0.1rem;
+}
+.my-card > .card-body {
+    padding:0.2rem 0.1rem 0.2rem 0.1rem;
+}
+.my-card > .card-body > .card-title{
+    font-size:0.5rem;
+}
+.my-img-small{
+    width:80px;
+    height:120px;
+}
+.list-group-item{
+    padding:0.2rem 0.2rem
+}
