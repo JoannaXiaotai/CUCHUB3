@@ -35,7 +35,7 @@ class ImageUploadHandler
         return [
 //            主动修改
 //            'path' => config('app.url') . "/$folder_name/$filename"
-            'path' => "http://localhost:82/cuchub_all/public" . "$folder_name/$filename"
+            'path' => "http://localhost:82/cuchub/public" . "$folder_name/$filename"
         ];
     }
 }

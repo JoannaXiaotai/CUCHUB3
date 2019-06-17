@@ -13,7 +13,7 @@
                         {{ $comment->user->name }}
                     </a>
                     <span class="text-secondary"> • </span>
-                    {{--<span class="meta text-secondary" title="{{ $comment->created_at }}">{{ $comment->created_at->diffForHumans() }}</span>--}}
+                    <span class="meta text-secondary" title="{{ $comment->created_at }}">{{ $comment->created_at->diffForHumans() }}</span>
 
                     {{-- 回复删除按钮 --}}
                     @can('destroy', $comment)

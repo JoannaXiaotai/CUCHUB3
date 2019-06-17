@@ -17,7 +17,7 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index(Request $request,Post $post)
     {
         // 查询数据，并且让查询结果是一个可分页对象
 //        $posts = Post::orderBy('created_at', 'desc') // 调用 Blog模型 的静态方法 orderBy('根据created_at字段', '倒叙排序')
@@ -32,7 +32,7 @@ class PostController extends Controller
                 $query->where('title','like',$search);
             }
         };
-        $posts=Post::where($where)->paginate(10);
+        $posts=Post::where($where)->withOrder()->paginate(10);
         return view('post.index',['posts' => $posts,]);
     }
 

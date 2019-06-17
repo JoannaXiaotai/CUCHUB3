@@ -13,11 +13,13 @@ $factory->define(Post::class, function (Faker $faker) {
 //
 //    // 传参为生成最大时间不超过，因为创建时间需永远比更改时间要早
 //    $created_at = $faker->dateTimeThisMonth($updated_at);
+    $date_time = $faker->date . ' ' . $faker->time;
     return [
         //
         'user_id' =>1,
         'title' => $faker->name,
         'content' => $faker->text,
-
+        'created_at' => $date_time,
+        'updated_at' => $date_time,
     ];
 });

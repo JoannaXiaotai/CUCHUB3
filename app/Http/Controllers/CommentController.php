@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Auth;
 use App\Comment;
+use App\Post;
 use Illuminate\Http\Request;
 
 class CommentController extends Controller
@@ -38,10 +39,16 @@ class CommentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,Comment $comment)
     {
         //
-        Comment::create($request->post());
+//        Comment::create($request->post());
+        $comment->fill($request->all());
+//        $comment->content=$request->content;
+        $comment->post_id=$request->post_id;
+        $comment->user_id=Auth::id();
+        $comment->save();
+//        return redirect()->to($comment->post)->with('success','评论创建成功！');
         session()->flash('success', '评论成功！');
         return redirect()->back();
     }

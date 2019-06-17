@@ -15,7 +15,7 @@ class CreateComments extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('content');
+            $table->text('content');
             $table->integer('post_id'); //这条评论是针对哪一篇博客的？
             $table->integer('user_id'); //这条评论是哪一位用户发送的？
             $table->timestamps();

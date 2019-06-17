@@ -31,9 +31,10 @@
                             <i class="far fa-user"></i>
                             {{ $post->user->name }}
                         </a>
+                        <p>发布时间<small>{{ $post->created_at }}</small></p>
                         {{--<span> • </span>--}}
                         {{--<i class="far fa-clock"></i>--}}
-                        {{--<span class="timeago" title="最后活跃于：{{ $post->updated_at }}">{{ post->updated_at->diffForHumans() }}</span>--}}
+                        {{--<span class="timeago" title="最后活跃于：{{ $post->updated_at }}">{{ $post->updated_at->diffForHumans() }}</span>--}}
                     </small>
 
                 </div>
